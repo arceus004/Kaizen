@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaizen Suggestion Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 20px;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      background-color: #6AC259;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .checkbox-group label {
+      width: 30%;
+      margin-right: 10px;
+      font-weight: normal;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #6AC259;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Kaizen Suggestion Form</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <!-- 1. Originator Details -->
+      <label>Name:</label>
+      <input type="text" name="Name" required>
+
+      <label>Department:</label>
+      <input type="text" name="Department" required>
+
+      <label>Contact Number:</label>
+      <input type="text" name="ContactNumber">
+
+      <label>Date Raised:</label>
+      <input type="date" name="DateRaised">
+
+      <!-- 2. Current State -->
+      <label>Name of Process:</label>
+      <input type="text" name="ProcessName">
+
+      <label>Procedure Number:</label>
+      <input type="text" name="ProcedureNumber">
+
+      <label>Department (Current State):</label>
+      <input type="text" name="CurrentDept">
+
+      <label>Comments:</label>
+      <textarea name="CurrentComments"></textarea>
+
+      <label>Adverse Impact Summary:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="AdverseImpact[]" value="Customer Service"> Customer Service</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="Cost"> Cost</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="Quality"> Quality</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="Safety"> Safety</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="Waste"> Waste</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="Transportation"> Transportation</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="High Defect Rate"> High Defect Rate</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="Inventory"> Inventory</label>
+        <label><input type="checkbox" name="AdverseImpact[]" value="Time"> Time</label>
+      </div>
+
+      <!-- 3. Improvement Idea -->
+      <label>Improvement Idea:</label>
+      <textarea name="ImprovementIdea"></textarea>
+
+      <!-- 4. Project Impact -->
+      <label>Change would positively impact:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="PositiveImpact[]" value="Customer Service"> Customer Service</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="Cost"> Cost</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="Quality"> Quality</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="Safety"> Safety</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="Waste"> Waste</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="Transportation"> Transportation</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="High Defect Rate"> High Defect Rate</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="Inventory"> Inventory</label>
+        <label><input type="checkbox" name="PositiveImpact[]" value="Time"> Time</label>
+      </div>
+
+      <label>Impact Summary:</label>
+      <textarea name="ImpactSummary"></textarea>
+
+      <!-- 5. Implementation Summary -->
+      <label>Implementation Difficulty:</label>
+      <select name="Difficulty">
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Challenging</option>
+      </select>
+
+      <label>Duration:</label>
+      <select name="Duration">
+        <option>1-3 months</option>
+        <option>4-6 months</option>
+        <option>>6 months</option>
+      </select>
+
+      <label>Personnel Required (Qty):</label>
+      <input type="number" name="PersonnelRequired">
+
+      <label>Budget Requirement:</label>
+      <input type="text" name="Budget">
+
+      <!-- Submit -->
+      <button type="submit">Submit Suggestion</button>
+    </form>
+  </div>
+</body>
+</html>
